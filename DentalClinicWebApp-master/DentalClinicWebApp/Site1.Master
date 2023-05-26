@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="DentalClinicWebApp.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%--Bootstrap css--%>
+
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <%--DataTables css--%>
+    <link href="Bootstrap/DatatTables/css/jquery.dataTables.min.css" rel="stylesheet" />
+        <%--FontAwesome css--%>
+    <link href="Bootstrap/fontAwesome/fontawesome/css/all.css" rel="stylesheet" />
+
+    <%--Our Custom css--%>
+    <link href="css/CustomStyleSheet.css" rel="stylesheet" />
+
+        <%--Jquery--%>
+    <script src="Bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+        <%--Popper JS--%>
+    <script src="Bootstrap/js/popper.min.js"></script>
+        <%-- JS Bootstrap--%>
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+      <form id="form1" runat="server">
+
+        <div id="formNav">
+      <nav class="navbar navbar-light bg-light">
+          <a class="navbar-brand" href="#">
+              <img src="Images/logo.jpg" width="80" height="80" class="d-inline-block align-top" alt=""/>
+              
+I-smile Dental care
+  </a>
+           
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto" >
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#AboutUS">About us</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="#Review">Testimonial</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="#info">Contact us</a>
+      </li>
+
+        <li class="nav-item">
+        <a class="nav-link" href="#services">Services</a>
+      </li>
+          </ul>
+          <ul class="navbar-nav">
+         <li Class="nav-link active">
+             <asp:LinkButton Class="nav-link" ID="LinkButton1"  runat="server" OnClick="LoginPage" >
+                 Login
+             </asp:LinkButton>
+         </li> 
+        <li Class="nav-link active">
+             <asp:LinkButton Class="nav-link" ID="LinkButton2" runat="server">
+                 Logout user
+             </asp:LinkButton>
+         </li> 
+
+     </ul>
+</div> 
+</nav>
+
+ </nav>  
+          </div>
+        <hr />
+       
+        <%--Main Content placeholder--%>
+
+        <div>
+             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+        </div>
+
+         <%--Main Content placeholder--%>     
+      <footer>
+           <section>
+          <div id="footer1" class="container-fluid">   
+            
+          <p style="text-align:center; background-color: cornflowerblue; position:relative; bottom:0px; width:100%; height:30px">&copy All right Reserved by <a class="footerlinks" href="#" target="_blank">I-smile dental care</a></p>
+              </div>
+          </section>
+        </footer>
+
+    </form> 
+</body>
+</html>
+

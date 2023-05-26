@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DoctorSite3.master.cs" Inherits="DentalClinicWebApp.DoctorSite3" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+
+    <%--Bootstrap css--%>
+
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <%--DataTables css--%>
+    <link href="Bootstrap/DatatTables/css/jquery.dataTables.min.css" rel="stylesheet" />
+        <%--FontAwesome css--%>
+    <link href="Bootstrap/fontAwesome/fontawesome/css/all.css" rel="stylesheet" />
+
+    <%--Our Custom css--%>
+    <%--<link href="css/CustomStyleSheet.css" rel="stylesheet" />--%>
+    <link href="css/StyleSheet1Master2.css" rel="stylesheet" />
+        <%--Jquery--%>
+    <script src="Bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+        <%--Popper JS--%>
+    <script src="Bootstrap/js/popper.min.js"></script>
+        <%-- JS Bootstrap--%>
+    <script src="Bootstrap/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+      <div class="wrapper">
+    <div class="sidebar">
+        <!--<img src="Images/logo.jpg" height="150" width="140" />-->
+       
+        <ul>
+            <li>            
+                 
+                <%--<img src="Images/house.png"  height="25" width="25"/>Patient info
+            </li>--%>
+            
+               <li><asp:LinkButton Class="fas fa-hospital-user" ID="LinkButton4" runat="server" BorderColor="Black" OnClick="Treatment">
+                Treatment info
+             </asp:LinkButton></li>
+               <li><asp:LinkButton Class="fas fa-file-medical" ID="LinkButton5" runat="server" BorderColor="Black" OnClick="CaseHistory" >
+             Case history
+             </asp:LinkButton></li>
+             <li><asp:LinkButton Class="fas fa-right-from-bracket" ID="LinkButton6" runat="server" BorderColor="Black" OnClick="Logout">
+             LogOut
+             </asp:LinkButton></li>
+        </ul> 
+    </div>
+    <div class="main_content">
+        <div class="header"></div>  
+        <!--<div class="info">
+            <h2>Forms</h2>
+      </div>-->
+
+        <%--Main content--%>
+        <div class="info">
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </div>
+      </div>
+</div>
+         <%--Main content--%>
+   
+    </form>
+</body>
+</html>

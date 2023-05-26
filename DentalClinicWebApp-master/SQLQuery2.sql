@@ -1,0 +1,1 @@
+﻿select * from SignUP1Table where 
